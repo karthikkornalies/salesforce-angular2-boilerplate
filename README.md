@@ -25,8 +25,14 @@ gulp --local
 ```
 
 If there were no errors you should now be running a local server with your future
-Angular 2 application. To deploy it to Salesforce run
+Angular 2 application. To deploy it to Salesforce first copy the files in the `salesforce`
+folder to your Org. These include 4 Apex classes and a Visualforce component that includes the necessary javascript in your
+Visualforce page. Modify the classes as needed. Once you've copied the files to your org run
 
 ```shell
 gulp dist
 ```
+
+If all goes well your files will be compiled, minified, and uploaded to Salesforce as a
+Static Resource. If you are logged in to Salesforce, when everything is done your browser
+should open to your newly created Visualforce page.
