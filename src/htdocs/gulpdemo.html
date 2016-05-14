@@ -1,0 +1,35 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+
+<c:clay></c:clay>
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<head>
+  <!--<link rel="stylesheet" type="text/css" href="{PATH}/index.css" />-->
+  <script type="text/javascript">
+    if(!window._sf) window._sf = {}
+    window._sf.api = "{!JSENCODE($Api.Session_ID)}";
+    window._sf.host = "{!JSENCODE(Host)}";
+  </script>
+</head>
+<body>
+
+
+  <app>Loading...</app>
+
+  <script src="{PATH}/assets/js/es6-shim.min.js"> </script>
+  <script src="{PATH}/assets/js/zone.min.js"> </script>
+  <script src="{PATH}/assets/js/Reflect.js"> </script>
+  <script src="{PATH}/assets/js/system.src.js"> </script> 
+  <!--<script src="{PATH}/assets/js/app.js"> </script>-->
+
+  <!-- 2. Configure SystemJS -->
+  <script src="{PATH}/assets/js/systemjs.config.js"></script>
+
+  <script>
+    System.import('app').catch(function(err){ console.error(err);  });
+  </script> 
+
+</body>
+</html>
+</apex:page>
